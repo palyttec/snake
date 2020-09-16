@@ -8,6 +8,7 @@ namespace snake
         static void Main(string[] args )
         {
             
+
             //Отрисовка рамочки 
             HorizontalLine upLine = new HorizontalLine(0, 78, 0, '+');
             HorizontalLine downLine = new HorizontalLine(0, 78, 24, '+');
@@ -21,7 +22,9 @@ namespace snake
 
             //Отрисовка точек
             Point p = new Point(4, 5, '*');
-            p.Draw();
+            Snake snake = new Snake( p, 4, Direction.RIGHT );
+            snake.Drow();
+
         }
     }
 }
