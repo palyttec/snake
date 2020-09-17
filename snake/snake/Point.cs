@@ -40,11 +40,11 @@ namespace snake
             }
             else if(direction == Direction.UP)
             {
-                x = x - offset;
+                x = x + offset;
             }
             else if(direction == Direction.DOWN)
             {
-                x = x + offset;
+                x = x - offset;
             }
         }
 
@@ -53,6 +53,13 @@ namespace snake
             Console.SetCursorPosition( x, y );
             Console.Write( sym );
         }
+
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
+        }
+
         public override string ToString()
         {
             return x + ", " + y + ", " + sym;
